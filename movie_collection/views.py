@@ -7,7 +7,7 @@ def movies(request):
   return render(request, 'movies/movies.html', {'movies': data})
 
 def home(request):
-  return HttpResponse('Home Page')
+  return render(request, 'movies/home.html')
 
 def detail(request, id):
   data = Movie.objects.get(pk=id)
@@ -25,9 +25,5 @@ def add(request):
   return render(request, 'movies/add.html')
 
 def delete(request, id):
-  try:
-    movie = Movie.objects.get(pk=id)
-  except:
-    raise Http404('Movie does not exist')
-  movie.delete
+  Movie.objects.get(pk=id).delete()
   return HttpResponseRedirect('/movies')

@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from movie_collection import views
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
  
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,3 +27,5 @@ urlpatterns = [
     path('movies/add', views.add),
     path('movies/delete/<int:id>', views.delete)
 ]
+
+urlpatterns += staticfiles_urlpatterns()
