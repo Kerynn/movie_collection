@@ -3,4 +3,4 @@
 </div>
 
 # <p align="center">Movie Collection</p>
-Continuing to learn Python and Django by building a web application containing movie data. View the collection of all movies, add a new movie, view movie details, and delete a movie. App was created during the Turing School of Software & Design's Mod 4 Hackathon.
+Continuing to learn Python and Django by building a web application containing movie data. View the collection of all movies, add a new movie, view movie details, and delete a movie.
